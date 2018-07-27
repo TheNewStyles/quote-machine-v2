@@ -1,0 +1,11 @@
+#tweet {
+    position: absolute;
+    bottom: -75%;
+    left: 1%;
+}
+
+#tweet img {
+    max-width: 25px;
+    fill: aqua;
+}
+

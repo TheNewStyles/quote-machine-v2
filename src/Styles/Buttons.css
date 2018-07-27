@@ -1,0 +1,20 @@
+button:focus {outline:0;}
+
+.btn {
+    color: var(--main-bg-color);
+    text-transform: uppercase;
+    background: var(--main-txt-color);
+    border: 1px solid var(--main-bg-color);
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    height: 4em;
+    padding: .75em;
+}
+
+.btn:hover {
+    color: white !important;
+    background: var(--main-bg-color);
+    border-color: var(--main-bg-color); 
+    transition: all 0.4s ease 0s;
+}

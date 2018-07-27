@@ -1,18 +1,19 @@
 #quote-box {
+    display: -ms-flexbox;
     display: flex;
+
     flex-direction: column;
-
     position: absolute;
-    top: 60%;  
-    left: 50%; 
-
+    top: 60%;
+    left: 50%;
     width: 305px;
     height: 185px;
-
-    background-color: rgba(244, 247, 250, 0.568);
+    background-color: rgba(6, 7, 8, 0.82);
 
     transform: translate(-50%, -50%);
-    color: red;
+    color: white;
+    font-size: 1.75em;
+    font-weight: bolder;
 }
 
 #quote-section {
@@ -23,8 +24,3 @@
     justify-content: center;
 }
 
-#button-section {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-around;
-}
