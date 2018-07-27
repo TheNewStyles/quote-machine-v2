@@ -4,7 +4,7 @@ export class Author extends Component {
   render() {
     return (
       <div id="author">
-        Author
+        This is the Author
       </div>
     )
   }

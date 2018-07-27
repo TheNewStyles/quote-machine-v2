@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-class QuoteText extends Component {
+export class QuoteText extends Component {
   render() {
     return (
         <div id="text">
-            TEXT
+            This is a quote from Pulp Fiction
         </div>
     )
   }
