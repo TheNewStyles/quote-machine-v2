@@ -9,7 +9,7 @@ export class TweetButton extends Component {
   render() {
     return (
         <button className="btn" id="tweet">
-            <img  src={twitter} alt="twitter icon"/>
+            <img  src={twitter} alt="twitter icon" onClick={this.props.onClick}/>
             Share
         </button>
     )

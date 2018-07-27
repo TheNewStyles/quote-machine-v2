@@ -15,7 +15,7 @@ export class QuoteBox extends Component {
             [0, `I'm American, honey. Our names don't mean shit. - Butch Coolidge`],
             [1, `Don't be a square - Mia Wallace`],
             [2, `I’ma get medieval on your ass. - Marsellus Wallace`],
-            [3, `Did you just order a five-dollar shake? - Vincent Vega`],
+            [3, `Did you just order a five dollar shake? - Vincent Vega`],
             [4, `I'm tryin' real hard to be the shepherd. - Jules Winnfield`],
             [5, `All right, everybody be cool, this is a robbery! - Honey Bunny`],
             [6, `You're going to give her an injection of adrenaline directly to her heart. -  Lance`],
@@ -32,7 +32,7 @@ export class QuoteBox extends Component {
     }
 
     getRandomNumber() {
-      return Math.floor(Math.random() * 12);
+      return Math.floor(Math.random() * 11);
     }
 
     getQuote(index) {
@@ -43,22 +43,29 @@ export class QuoteBox extends Component {
       return `- ` + this.state.quotes.get(index).split('-')[1];
     }
 
+    updateIndex() {
+      this.setState({
+        currentIndex: Math.floor(Math.random() * 11)
+      });
+    }
+
     handleClick(e) {
-      //clear quote text
+      e.preventDefault();      
       //clear author
-      //set quote = getQuote
-      //set author = getAuthor
+      this.updateIndex();
+      //set quote = getQuote (new index)
+      //set author = getAuthor (new index)
     }
 
     handleTweet(e) {
-
+      //look into twitter api
     }
 
     render() {
         return (
             <div id="quote-box">
                 <div id="quote-section">
-                    <QuoteText text={this.getQuote(this.state.currentIndex)} />
+                    <QuoteText quote={this.getQuote(this.state.currentIndex)} />
                     <Author author={this.getAuthor(this.state.currentIndex)} />
                 </div>
                 <div id="button-section">
