@@ -4,7 +4,7 @@ export class QuoteText extends Component {
   render() {
     return (
         <div id="text">
-            This is a quote from Pulp Fiction
+            {this.props.text}
         </div>
     )
   }
