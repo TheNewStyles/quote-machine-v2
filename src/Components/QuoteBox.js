@@ -18,11 +18,11 @@ export class QuoteBox extends Component {
             [3, `Did you just order a five dollar shake? - Vincent Vega`],
             [4, `I'm tryin' real hard to be the shepherd. - Jules Winnfield`],
             [5, `All right, everybody be cool, this is a robbery! - Honey Bunny`],
-            [6, `You're going to give her an injection of adrenaline directly to her heart. -  Lance`],
+            [6, `I've never had to give an adrenalin shot. -  Lance`],
             [7, `Pig! - Jody`],
-            [8, `I don't need you to tell me how ****ing good my coffee is, okay? - Jimmy`],
-            [10, `I’m Winston Wolfe. I solve problems. - The Wolf`],
-            [11, `Five long years, he wore this watch up his ass. - Captain Koons`]
+            [8, `I don't need you to tell me how fucking good my coffee is, okay? - Jimmy`],
+            [9, `I’m Winston Wolfe. I solve problems. - The Wolf`],
+            [10, `Five long years, he wore this watch up his ass. - Captain Koons`]
           ]),
           currentIndex: this.getRandomNumber(),
         }
@@ -43,22 +43,19 @@ export class QuoteBox extends Component {
       return `- ` + this.state.quotes.get(index).split('-')[1];
     }
 
+    handleClick(e) {
+      e.preventDefault();      
+      this.updateIndex();
+    }
+
     updateIndex() {
       this.setState({
         currentIndex: Math.floor(Math.random() * 11)
       });
     }
 
-    handleClick(e) {
-      e.preventDefault();      
-      //clear author
-      this.updateIndex();
-      //set quote = getQuote (new index)
-      //set author = getAuthor (new index)
-    }
-
     handleTweet(e) {
-      //look into twitter api
+      
     }
 
     render() {
@@ -70,7 +67,7 @@ export class QuoteBox extends Component {
                 </div>
                 <div id="button-section">
                     <NewQuoteButton onClick={this.handleClick} />
-                    <TweetButton onClick={this.handleTweet} /> 
+                    <TweetButton onClick={this.handleTweet}  tweet={this.state.quotes.get(this.state.currentIndex)}/> 
                 </div>                     
             </div>   
         )
