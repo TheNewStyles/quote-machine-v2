@@ -1,0 +1,27 @@
+button:focus {outline:0;}
+
+.btn {
+  color: var(--main-txt-color);
+  text-transform: uppercase;
+  background: var(--main-bg-color);
+  border: 3px solid var(--main-txt-color);
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  height: 3.25em;
+}
+
+.btn:hover {
+  color: var(--main-bg-color) !important;
+  background: var(--main-txt-color);
+  border-color: var(--main-bg-color); 
+  transition: all 0.4s ease 0s;
+}
+
+.btn:hover a{
+  color: var(--main-bg-color) !important;
+  background: var(--main-txt-color);
+  border-color: var(--main-bg-color); 
+  transition: all 0.4s ease 0s;
+}
+
