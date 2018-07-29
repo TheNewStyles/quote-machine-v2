@@ -10,7 +10,7 @@ export class TweetButton extends Component {
     return (
         <button className="btn" id="tweet">
             <img  src={twitter} alt="twitter icon" onClick={this.props.onClick}/>
-            <a href={"https://twitter.com/intent/tweet?"+this.props.tweet}>Share</a>            
+            <a href={"https://twitter.com/intent/tweet?text="+this.props.tweet}>Share</a>            
         </button>
     )
   }

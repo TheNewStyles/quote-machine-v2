@@ -9,3 +9,7 @@
     fill: aqua;
 }
 
+#tweet a {
+  color: white;
+  text-decoration: none;
+}
